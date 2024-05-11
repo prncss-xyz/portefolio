@@ -29,12 +29,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>
+      <body
+        style={{
+          backgroundImage: `url(${backgroudImage})`,
+          width: "100vw",
+          height: "100vh",
+          backgroundRepeat: "repeat",
+          backgroundPositionX: "left",
+          backgroundPositionY: "top",
+        }}
+      >
         <Theme
           accentColor="cyan"
           grayColor="mauve"
           style={{
-            backgroundImage: `url(${backgroudImage})`,
+            backgroundColor: "transparent",
           }}
         >
           <Container px="4" pt="5">
