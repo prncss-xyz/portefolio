@@ -1,0 +1,100 @@
+import { Project } from "@/components/project";
+import { Group } from "@/components/group";
+import { MainText } from "@/components/mainText";
+
+<MainText>
+
+# Juliette Lamarche, Full-stack developer
+
+Hi! it's Juliette! I'm a **bilingual** (French/English) **full-stack** developer from **Montreal**. My dad thougth me Pascal when I was a teen, and I have been an avid **self-learner** ever since. I have graduated both in **mathematics** and humanities. 
+
+
+I understand code as a form of communication. I see technical problems in their social contexts. I have a fascination for knowledge management. I balance a taste for autonomy with a love of teamwork. When I am not coding, I organise community art projects as a visual artist. I also write poetry. I thrive in intellectual challenge.
+
+
+My main languages are **TypeScript**, **Go** and **Lua**. I also know some C/C++, Haskell and Bash. I have in-depth knowdledge of **React** and some experience with **React Native**. I've been using **Linux** for 20 years. I like to apply **functional programing** patterns in a pragmatic way.
+
+
+If you think we might be a good fit, please [reach out](https://www.linkedin.com/in/juliette-lamarche-2295a4248/)!
+</MainText>
+
+<Group name="Realisations" variant={0} >
+
+<Project 
+  title="OIC" 
+  tags={["nextjs", "docker", "github actions", "wordpress headless", "GraphQL"]} 
+  demo="https://www.oiedecravan.com/"
+  demoLabel="site"
+>
+
+A website for academic papers aroud litterature and litterary studies.
+
+</Project>
+
+<Project 
+  title="Oie de Cravan" 
+  tags={["jamstack", "gitlab actions"]} 
+  demo="https://www.oiedecravan.com/"
+  demoLabel="site"
+>
+
+Commercial site for a bilingual book publisher. (Great books btw!) The site is fully static and integrates in preexisting Airtable workflow. There is a client-side search functionality.
+
+</Project>
+
+</Group>
+
+<Group name="Projects" variant={1} >
+
+<Project 
+  title="Timer List" 
+  tags={["react native", "expo", "jotai", "optics-ts", "playwright"]} 
+  demo="https://prncss-xyz.github.io/timer-list/"
+  demoLabel="web demo"
+  source="https://github.com/prncss-xyz/timer-list"
+>
+
+A native timer app, supplemented with a "playlist", i.e. a list of durations. 
+
+</Project>
+
+<Project 
+  title="Zknext" 
+  tags={["nextjs", "zustand", "optics-ts", "playwright", "sqlite", "kisely", "zod", "google cloud run"]} 
+  demo="https://next-app-project-kakx2xw7fq-nn.a.run.app/"
+  demoLabel="demo (read-only)"
+  source="https://github.com/prncss-xyz/zknext"
+>
+
+An application I use to visualize and navigate my note collection. These notes
+are markdown files with metadata. The app consists of a Next server
+which watches the notes directory and lets it be explored in a structured way.
+
+</Project>
+
+<Project
+  title="Flua"
+  tags={["lua", "functional programming"]}
+  source="https://github.com/prncss-xyz/flua"
+>
+
+A monadic iterator composition library for lua.
+
+</Project>
+
+</Group>
+
+<Group name="Talks" variant={2} >
+
+<Project
+  title="Functional Optics for State Management and Beyond"
+  tags={["functional programming"]}
+  demo="recording"
+  source="https://www.youtube.com/watch?v=GkFKxbMbK6A"
+>
+
+A talk about a time tested methodology and its application in state management.
+
+</Project>
+
+</Group>
