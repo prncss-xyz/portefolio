@@ -8,6 +8,7 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 const nextConfig = {
   output: "export",
   basePath: "/portefolio",
+
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
