@@ -1,7 +1,7 @@
-"use client";
 import { Text, Card, Flex, Badge, Link } from "@radix-ui/themes";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { ProjectTransition } from "./transitions";
 
 function Ressource({ name, href }: { name: string; href?: string }) {
   if (!href) return null;
@@ -38,20 +38,14 @@ export function Project({
   children: ReactNode;
 }) {
   return (
-    <Card
-      size="2"
-      style={{
-        backgroundColor: "var(--gray-indicator)",
-        width: cardWidth,
-        height: cardHeigh,
-      }}
-      asChild
-    >
-      <motion.div
-        transition={{ duration: 0.7 }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+    <ProjectTransition>
+      <Card
+        size="2"
+        style={{
+          backgroundColor: "var(--gray-indicator)",
+          width: cardWidth,
+          height: cardHeigh,
+        }}
       >
         <Flex direction="column" gap="3">
           <Text weight="bold" style={{ color: "var(--accent-11)" }}>
@@ -68,7 +62,7 @@ export function Project({
             ))}
           </Flex>
         </Flex>
-      </motion.div>
-    </Card>
+      </Card>
+    </ProjectTransition>
   );
 }
