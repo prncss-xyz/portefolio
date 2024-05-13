@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const themePanel = false;
 // https://fffuel.co/llleaves/
-const backgroudImage = "/background.svg";
+const backgroudImage = "/portefolio/background.svg";
 
 export default function RootLayout({
   children,
