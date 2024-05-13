@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 };
 
 const themePanel = false;
-const env = process.env.NODE_ENV;
 // https://fffuel.co/llleaves/
 const backgroudImage = "/background.svg";
 
@@ -46,7 +45,7 @@ export default function RootLayout({
             backgroundColor: "transparent",
           }}
         >
-          <Container px="4" pt="5">
+          <Container px="4" pt="5" pb="3">
             <Flex direction="column" gap="9">
               <Banner />
               <Nav />
@@ -54,7 +53,7 @@ export default function RootLayout({
               <Footer />
             </Flex>
           </Container>
-          {themePanel && env === "development" && <ThemePanel />}
+          {themePanel && <ThemePanel />}
         </Theme>
       </body>
     </html>
