@@ -3,7 +3,6 @@ import rehypeMdxImportMedia from "rehype-mdx-import-media";
 import remarkGfm from "remark-gfm";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import { basePath } from "./src/basePath";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -31,7 +30,7 @@ const nextConfig = {
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
   output: "export",
-  basePath,
+  basePath: "/portefolio",
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
