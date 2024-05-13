@@ -31,7 +31,7 @@ export function Group({
         <Icon variant={variant} />
       </Flex>
       <Flex justify="center">
-        <Separator style={{ width: 400 }} />
+        <Separator size="4" />
       </Flex>
       <Flex wrap="wrap" gap="2" justify="center">
         {children}

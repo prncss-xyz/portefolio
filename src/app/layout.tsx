@@ -30,6 +30,7 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body
         style={{
+          margin: 0,
           backgroundImage: `url(${backgroudImage})`,
           width: "100vw",
           height: "100vh",
@@ -45,7 +46,7 @@ export default function RootLayout({
             backgroundColor: "transparent",
           }}
         >
-          <Container px="4" pt="5" pb="3">
+          <Container px={{ initial: "1", sm: "2", md: "4" }} pt="5" pb="3">
             <Flex direction="column" gap="9">
               <Banner />
               <Nav />
