@@ -9,8 +9,9 @@ import {
   Text,
 } from "@radix-ui/themes";
 import type { MDXComponents } from "mdx/types";
-import Image, { ImageProps } from "next/image";
+import ExportedImage, { ExportedImageProps } from "next-image-export-optimizer";
 import { ReactNode } from "react";
+import { basePath } from "./basePath";
 
 const h1 = (props: { children?: ReactNode }) => <Heading as="h1" {...props} />;
 const h2 = (props: { children?: ReactNode }) => <Heading as="h2" {...props} />;
@@ -51,10 +52,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a,
     img: (props) => (
       // eslint-disable-next-line jsx-a11y/alt-text
-      <Image
+      <ExportedImage
+        basePath={basePath}
         sizes="100vw"
         style={{ maxWidth: "100%", height: "auto" }}
-        {...(props as ImageProps)}
+        {...(props as ExportedImageProps)}
       />
     ),
     ...components,

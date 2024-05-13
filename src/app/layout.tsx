@@ -6,6 +6,7 @@ import { Theme, ThemePanel, Container, Flex } from "@radix-ui/themes";
 import { Footer } from "@/components/footer";
 import { Banner } from "@/components/banner";
 import { Nav } from "@/components/nav";
+import { basePath } from "@/basePath";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,11 +16,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Juliette Lamarche portefolio",
+  description: "Juliette's portefolio website",
 };
 
 const themePanel = false;
 // https://fffuel.co/llleaves/
-const backgroudImage = "/portefolio/background.svg";
+const backgroudImage = basePath + "/background.svg";
 
 export default function RootLayout({
   children,
