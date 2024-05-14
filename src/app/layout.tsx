@@ -10,7 +10,7 @@ import { cssURL } from "@/utils/cssURL";
 
 const font = Nunito({
   subsets: ["latin"],
-  display: "swap",
+  display: "optional",
   variable: "--base-font",
 });
 
