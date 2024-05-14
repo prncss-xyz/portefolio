@@ -1,6 +1,6 @@
 function getBasePath() {
   const url = process.env.URL;
-  if (!url) return "/";
+  if (!url) return undefined;
   const parsed = new URL(url);
   return parsed.pathname;
 }

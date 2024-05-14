@@ -1,41 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Lora, Nunito, Rubik, Source_Sans_3 } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import { Theme, ThemePanel, Container, Flex } from "@radix-ui/themes";
 import { Footer } from "@/components/footer";
 import { Banner } from "@/components/banner";
 import { Nav } from "@/components/nav";
-import { basePath } from "@/basePath";
-
-/*
-const font = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-default",
-});
-*/
-
-/*
-const font = Lora({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-default",
-});
-*/
-
-/*
-const font = Source_Sans_3({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-default",
-});
-*/
+import { cssURL } from "@/utils/cssURL";
 
 const font = Nunito({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-default",
+  variable: "--base-font",
 });
 
 export const metadata: Metadata = {
@@ -44,8 +20,6 @@ export const metadata: Metadata = {
 };
 
 const themePanel = false && process.env.NODE_ENV === "development";
-// https://fffuel.co/llleaves/
-const backgroudImage = basePath + "/background.svg";
 
 export default function RootLayout({
   children,
@@ -57,7 +31,8 @@ export default function RootLayout({
       <body
         style={{
           margin: 0,
-          backgroundImage: `url(${backgroudImage})`,
+          // https://fffuel.co/llleaves/
+          backgroundImage: cssURL("/background.svg"),
           width: "100vw",
           height: "100vh",
           backgroundRepeat: "repeat",

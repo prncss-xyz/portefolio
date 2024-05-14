@@ -1,8 +1,7 @@
 import { Link, Text, Card, Flex, Badge, Box } from "@radix-ui/themes";
 import { ReactNode } from "react";
 import { ProjectTransition } from "./transitions";
-import ExportedImage from "next-image-export-optimizer";
-import { basePath } from "@/basePath";
+import { Img } from "./image";
 
 const cardWidth = 310;
 const cardHeigh = 310;
@@ -58,10 +57,9 @@ export function Project({
             <Flex justify="center">
               <Link href={site} target="_blank">
                 <Box width={`${thumbSize}px`} height={`${thumbSize}px`}>
-                  <ExportedImage
+                  <Img
                     src={image}
                     alt="thumbnail"
-                    basePath={basePath}
                     style={{
                       objectFit: "cover",
                       width: "100%",

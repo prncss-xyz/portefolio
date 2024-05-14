@@ -1,4 +1,3 @@
 .radix-themes {
-  --default-font-family: var(--font-default);
+  --default-font-family: var(--base-font);
 }
-
