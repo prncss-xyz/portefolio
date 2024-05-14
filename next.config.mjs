@@ -4,6 +4,13 @@ import remarkGfm from "remark-gfm";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
+function getBasePath() {
+  const url = process.env.URL;
+  if (!url) return "/";
+  const parsed = new URL(url);
+  return parsed.pathname;
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
@@ -30,7 +37,7 @@ const nextConfig = {
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
   output: "export",
-  basePath: "/portefolio",
+  basePath: getBasePath(),
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
