@@ -7,7 +7,6 @@ import { Footer } from "@/components/footer";
 import { Banner } from "@/components/banner";
 import { Nav } from "@/components/nav";
 import { cssURL } from "@/utils/cssURL";
-import { MotionProvider } from "@/components/motionProvider";
 
 const font = Nunito({
   subsets: ["latin"],
@@ -28,7 +27,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <MotionProvider>
       <html lang="en" className={font.variable}>
         <body
           style={{
@@ -61,6 +59,5 @@ export default function RootLayout({
           </Theme>
         </body>
       </html>
-    </MotionProvider>
   );
 }
