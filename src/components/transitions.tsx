@@ -1,8 +1,13 @@
-"use client";
+/* "use client"; */
+import { ReactNode } from "react";
 
+export function ProjectTransition({ children }: { children: ReactNode }) {
+  return children;
+}
+
+/*
 import { MotionProvider } from "@/components/motionProvider";
 import { m } from "framer-motion";
-import { ReactNode } from "react";
 
 export function ProjectTransition({ children }: { children: ReactNode }) {
   return (
@@ -18,3 +23,4 @@ export function ProjectTransition({ children }: { children: ReactNode }) {
     </MotionProvider>
   );
 }
+*/
