@@ -54,7 +54,7 @@ export const borderWidths = { 0: 0.5, 1: 1, 2: 2, 3: 5 } as const;
 
 const colors_ = {
   translucent: "hsla(0,0%,100%,.7)",
-  panel: "#eeeeee",
+  panel: "#dddde0",
   gray1: "#fdfcfd",
   gray2: "#faf9fb",
   gray3: "#f2eff3",
