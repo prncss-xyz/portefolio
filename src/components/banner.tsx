@@ -7,7 +7,7 @@ import { OutLink } from "./base/outLink";
 export function Banner() {
   return (
     <Card
-      backgroundColor="accent5"
+      backgroundColor="accent2"
       borderColor="accent11"
       color="accent11"
       size={2}
