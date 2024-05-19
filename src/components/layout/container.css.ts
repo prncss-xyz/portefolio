@@ -6,16 +6,13 @@ globalStyle("html", { boxSizing: "border-box" });
 globalStyle("*, *:before, *:after", { boxSizing: "inherit" });
 globalStyle("body", { margin: 0 });
 
-import { colors } from "../../../tokens";
 globalStyle("a", {
   all: "unset",
-  color: colors.accent11,
 });
 
 globalStyle("a:hover", {
   cursor: "pointer",
 });
-
 
 export const containerRecipe = recipe({
   variants: {

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
-import * as TabNav from "./base/tabNav";
+import { Link as TabLink } from "./base/tabNav";
 
 export function NavLink({
   href,
@@ -14,10 +14,8 @@ export function NavLink({
 }) {
   const active = usePathname() === href;
   return (
-    <TabNav.Link value={href} active={active}>
-      <Link href={href}>
-        {children}
-      </Link>
-    </TabNav.Link>
+    <TabLink value={href} active={active}>
+      <Link href={href}>{children}</Link>
+    </TabLink>
   );
 }

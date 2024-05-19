@@ -23,10 +23,13 @@ export const itemOuterRecipe = recipe({
     active: {
       true: atoms({
         borderWidth: 2,
+        color: "gray12",
         borderStyle: "bottom",
         borderColor: "accent9",
       }),
-      false: atoms({}),
+      false: atoms({
+        color: "gray11",
+      }),
     },
   },
 });
