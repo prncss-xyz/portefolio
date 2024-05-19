@@ -3,7 +3,7 @@ import { globalStyle } from "@vanilla-extract/css";
 import { atoms } from "../../../atoms.css";
 import { colors } from "../../../tokens";
 
-const itemInner = atoms({
+export const itemInner = atoms({
   px: 2,
   py: 1,
   fontSize: 2,
@@ -12,20 +12,6 @@ const itemInner = atoms({
 
 globalStyle(`${itemInner}:hover`, {
   backgroundColor: colors.grayA3,
-});
-
-export const itemInnerRecipe = recipe({
-  base: itemInner,
-  variants: {
-    active: {
-      true: atoms({
-        color: "gray12",
-      }),
-      false: atoms({
-        color: "gray11",
-      }),
-    },
-  },
 });
 
 export const itemOuterRecipe = recipe({
