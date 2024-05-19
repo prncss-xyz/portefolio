@@ -1,6 +1,6 @@
 import { Project } from "@/components/project";
-import { Flex } from "@radix-ui/themes";
-import { Group } from "@/components/group";
+import { Flex } from "@/components/layout/flex";
+import { Section } from "@/components/section";
 import { MainText } from "@/components/mainText";
 import oie from "@/assets/Oie de Cravan.png";
 import oic from "@/assets/OIC.png";
@@ -10,7 +10,7 @@ import flua from "@/assets/flua.png";
 import portefolio from "@/assets/portefolio.png";
 import lensTalk from "@/assets/lens-talk.png";
 
-<Flex direction="column" gap="8">
+<Flex direction="y" gap={10}>
 <MainText>
 
 # Juliette Lamarche, Full-stack developer
@@ -27,7 +27,7 @@ My main languages are **TypeScript**, **Go** and **Lua**. I also know some C/C++
 If you think we might be a good fit, please [reach out](mailto:juliette.lamarche.xyz@gmail.com)!
 </MainText>
 
-<Group name="Realizations" variant={0} >
+<Section name="Realizations" variant={0} >
 
 <Project 
   title="OIC" 
@@ -62,9 +62,9 @@ Like many programmers, I am found of recursion.
 
 </Project>
 
-</Group>
+</Section>
 
-<Group name="Projects" variant={1} >
+<Section name="Projects" variant={1} >
 
 <Project 
   title="Timer List" 
@@ -102,9 +102,9 @@ A monadic iterator composition library for Lua.
 
 </Project>
 
-</Group>
+</Section>
 
-<Group name="Talks" variant={2} >
+<Section name="Talks" variant={2} >
 
 <Project
   title="Functional Optics for State Management and Beyond"
@@ -117,5 +117,5 @@ A talk about a time-tested methodology and its application to state management.
 
 </Project>
 
-</Group>
+</Section>
 </Flex>

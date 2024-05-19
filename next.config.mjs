@@ -4,15 +4,8 @@ import remarkGfm from "remark-gfm";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { basePath } from "./basePath.mjs";
-
-/*
-function getBasePath() {
-  const url = process.env.URL;
-  if (!url) return undefined;
-  const parsed = new URL(url);
-  return parsed.pathname;
-}
-*/
+import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
+const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -40,7 +33,7 @@ const nextConfig = {
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
   output: "export",
-  basePath: basePath,
+  basePath,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
@@ -51,4 +44,4 @@ const withMDX = createMDX({
   },
 });
 
-export default withMDX(nextConfig);
+export default withVanillaExtract(withMDX(nextConfig));

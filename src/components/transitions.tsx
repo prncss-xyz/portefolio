@@ -1,4 +1,5 @@
 "use client";
+
 import { m } from "framer-motion";
 import { ReactNode } from "react";
 import { MotionProvider } from "./motionProvider";

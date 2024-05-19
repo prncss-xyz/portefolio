@@ -1,39 +1,44 @@
-import { Flex, Heading, Separator } from "@radix-ui/themes";
 import { BellIcon, HeartIcon, StarIcon } from "@radix-ui/react-icons";
 import { ReactNode } from "react";
+import { Flex } from "./layout/flex";
+import { Heading } from "./base/heading";
+import { Separator } from "./base/separator";
+import { colors } from "../../tokens";
 
-const color = "var(--gray-9)";
-function Icon({ variant }: { variant: number }) {
+type Variant = 0 | 1 | 2;
+
+const color = colors.gray9;
+function Icon({ variant }: { variant: Variant }) {
   switch (variant) {
     case 0:
       return <StarIcon color={color} />;
     case 1:
       return <HeartIcon color={color} />;
-    default:
+    case 2:
       return <BellIcon color={color} />;
   }
 }
 
-export function Group({
+export function Section({
   name,
   variant,
   children,
 }: {
   name: string;
-  variant: number;
+  variant: Variant;
   children: ReactNode;
 }) {
   return (
-    <Flex direction="column" gap="3">
-      <Flex gap="2" align="center" justify="center">
+    <Flex direction="y" gap={3}>
+      <Flex gap={3} align="center" justify="center">
         <Icon variant={variant} />
         <Heading as="h2">{name}</Heading>
         <Icon variant={variant} />
       </Flex>
       <Flex justify="center">
-        <Separator size="4" />
+        <Separator />
       </Flex>
-      <Flex wrap="wrap" gap="2" justify="center">
+      <Flex wrap="wrap" gap={2} justify="center">
         {children}
       </Flex>
     </Flex>

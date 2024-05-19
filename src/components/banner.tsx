@@ -1,25 +1,37 @@
 import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Link, Card, Flex, VisuallyHidden } from "@radix-ui/themes";
+import { Card } from "./base/card";
+import { Flex } from "./layout/flex";
+import { VisuallyHidden } from "./layout/visuallyHidden";
+import { OutLink } from "./base/outLink";
 
 export function Banner() {
   return (
-    <Card style={{ backgroundColor: "var(--accent-9)" }}>
-      <Flex justify="between">
-        <Link
-          weight="bold"
-          href="https://www.linkedin.com/in/juliette-lamarche-2295a4248/"
-        >
+    <Card
+      backgroundColor="accent5"
+      borderColor="accent11"
+      color="accent11"
+      size={2}
+    >
+      <Flex justify="between" fontWeight="bold" align="center">
+        <OutLink href="https://www.linkedin.com/in/juliette-lamarche-2295a4248/">
           Open to work!
-        </Link>
-        <Flex gap="3">
-          <Link href="https://www.linkedin.com/in/juliette-lamarche-2295a4248/">
+        </OutLink>
+        <Flex
+          gap={3}
+          align="center"
+          style={{
+            position: "relative",
+            top: 2,
+          }}
+        >
+          <OutLink href="https://www.linkedin.com/in/juliette-lamarche-2295a4248/">
             <LinkedInLogoIcon />
             <VisuallyHidden>LinkedIn</VisuallyHidden>
-          </Link>
-          <Link href="https://github.com/prncss-xyz/">
+          </OutLink>
+          <OutLink href="https://github.com/prncss-xyz/">
             <GitHubLogoIcon />
             <VisuallyHidden>Github</VisuallyHidden>
-          </Link>
+          </OutLink>
         </Flex>
       </Flex>
     </Card>

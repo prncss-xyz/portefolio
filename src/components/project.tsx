@@ -1,10 +1,12 @@
-import { Link, Text, Card, Flex, Badge, Box } from "@radix-ui/themes";
 import { ReactNode } from "react";
 import { ProjectTransition } from "./transitions";
-import { Img } from "./image";
+import { Card } from "./base/card";
+import { Flex } from "./layout/flex";
+import { Box } from "./layout/box";
+import { Badge } from "./base/badge";
+import { Img } from "./next/image";
+import { OutLink } from "./base/outLink";
 
-const cardWidth = 310;
-const cardHeigh = 310;
 const thumbSize = 100;
 
 export function Project({
@@ -24,51 +26,42 @@ export function Project({
 }) {
   return (
     <ProjectTransition>
-      <Card
-        size="2"
-        style={{
-          backgroundColor: "var(--gray-indicator)",
-          width: cardWidth,
-          height: cardHeigh,
-        }}
-      >
-        <Flex direction="column" gap="3" justify="between" height="100%">
-          <Flex direction="column" gap="3">
-            <Text weight="bold" style={{ color: "var(--accent-11)" }}>
+      <Card size={2} width="card" height="card">
+        <Flex direction="y" gap={3} justify="between" height="100%">
+          <Flex direction="y" gap={3}>
+            <Box fontWeight="bold" color="accent11">
               {title}
-            </Text>
-            <Text style={{ color: "black" }}>{children}</Text>
+            </Box>
+            <Box color="text">{children}</Box>
           </Flex>
-          <Flex justify="between" gap="3" align="end">
-            <Flex direction="column" gap="3" align="start">
+          <Flex justify="between" gap={3} align="end">
+            <Flex direction="y" gap={3} align="start">
               {source && (
-                <Link href={source} target="_blank">
-                  <Badge variant="outline" size="3">
+                <OutLink href={source}>
+                  <Badge kind="outline" size={2}>
                     Source
                   </Badge>
-                </Link>
+                </OutLink>
               )}
-              <Flex gap="1" wrap="wrap">
+              <Flex gap={1} wrap="wrap">
                 {tags.map((tag) => (
-                  <Badge key={tag}>{tag}</Badge>
+                  <Badge size={1} key={tag}>
+                    {tag}
+                  </Badge>
                 ))}
               </Flex>
             </Flex>
             <Flex justify="center">
-              <Link href={site} target="_blank">
-                <Box width={`${thumbSize}px`} height={`${thumbSize}px`}>
-                  <Img
-                    src={image}
-                    alt="thumbnail"
-                    style={{
-                      objectFit: "cover",
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "var(--radius-2)",
-                    }}
-                  />
-                </Box>
-              </Link>
+              <OutLink
+                href={site}
+                target="_blank"
+                __width={`${thumbSize}px`}
+                __height={`${thumbSize}px`}
+                borderRadius={2}
+                overflow="hidden"
+              >
+                <Img src={image} alt="thumbnail" />
+              </OutLink>
             </Flex>
           </Flex>
         </Flex>
