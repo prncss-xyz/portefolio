@@ -55,7 +55,7 @@ export const badgeRecipe = recipe({
     {
       variants: { color: "accent", kind: "solid" },
       style: atoms({
-        color: "accentA11",
+        color: "accent11",
         backgroundColor: "accentA3",
       }),
     },
