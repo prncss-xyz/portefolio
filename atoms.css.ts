@@ -40,7 +40,7 @@ const unconditionalProperties = defineProperties({
 
 export const responsiveProperties = defineProperties({
   conditions: {
-    xs: { "@media": "screen and (min-width: 520px)" },
+    xs: {},
     sm: { "@media": "screen and (min-width: 728px)" },
     md: { "@media": "screen and (min-width: 1024px)" },
     lg: { "@media": "screen and (min-width: 1280px)" },

@@ -22,7 +22,7 @@ export const containerRecipe = recipe({
     size: {
       1: atoms({
         width: {
-          xs: "screenXS",
+          xs: "100%",
           sm: "screenSM",
           md: "screenMD",
           lg: "screenLG",
