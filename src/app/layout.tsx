@@ -9,7 +9,7 @@ import { Nav } from "@/components/nav";
 
 const font = Nunito({
   subsets: ["latin"],
-  display: "optional",
+  display: "block",
 });
 
 export const metadata: Metadata = {
