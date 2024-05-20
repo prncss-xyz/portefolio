@@ -1,6 +1,6 @@
 import { Project } from "@/components/project";
 import { Flex } from "@/components/layout/flex";
-import { Section } from "@/components/section";
+import { RealizationsSection, PackagesSection, ProjectsSection, TalksSection } from "@/components/sections";
 import { MainText } from "@/components/mainText";
 import oie from "@/assets/Oie de Cravan.png";
 import oic from "@/assets/OIC.png";
@@ -9,6 +9,7 @@ import zknext from "@/assets/zknext.png";
 import flua from "@/assets/flua.png";
 import portefolio from "@/assets/portefolio.png";
 import lensTalk from "@/assets/lens-talk.png";
+import zustandOptics from "@/assets/zustand-optics.png"
 
 <Flex direction="y" gap={10}>
 <MainText>
@@ -27,7 +28,62 @@ My main languages are **TypeScript**, **Go** and **Lua**. I also know some C/C++
 If you think we might be a good fit, please [reach out](mailto:juliette.lamarche.xyz@gmail.com)!
 </MainText>
 
-<Section name="Realizations" variant={0} >
+<PackagesSection>
+
+<Project 
+  title="Zustand Optics" 
+  tags={["npm", "react", "functional programming"]}
+  site="https://www.npmjs.com/package/@prncss-xyz/zustand-optics"
+  image={zustandOptics}
+>
+
+ A zustand adapter for optics-ts.
+
+</Project>
+
+</PackagesSection>
+
+<ProjectsSection>
+
+<Project 
+  title="Timer List" 
+  tags={["react native", "expo"]} 
+  site="https://prncss-xyz.github.io/timer-list/"
+  image={timerList}
+  source="https://github.com/prncss-xyz/timer-list"
+>
+
+A native timer app, supplemented with a "playlist", i.e. a list of durations. 
+
+</Project>
+
+<Project 
+  title="Zknext" 
+  tags={["nodejs", "nextjs", "react", "kisely", "google cloud run"]} 
+  site="https://next-app-project-kakx2xw7fq-nn.a.run.app/"
+  image={zknext}
+  source="https://github.com/prncss-xyz/zknext"
+>
+
+An application to explore a directory of markdown files in an organized way. 
+
+</Project>
+
+<Project
+  title="Flua"
+  tags={["lua", "functional programming"]}
+  site="https://github.com/prncss-xyz/flua"
+  image={flua}
+  source="https://github.com/prncss-xyz/flua"
+>
+
+A monadic iterator composition library for Lua.
+
+</Project>
+
+</ProjectsSection>
+
+<RealizationsSection>
 
 <Project 
   title="OIC" 
@@ -62,49 +118,9 @@ Like many programmers, I am found of recursion.
 
 </Project>
 
-</Section>
+</RealizationsSection>
 
-<Section name="Projects" variant={1} >
-
-<Project 
-  title="Timer List" 
-  tags={["react native", "expo"]} 
-  site="https://prncss-xyz.github.io/timer-list/"
-  image={timerList}
-  source="https://github.com/prncss-xyz/timer-list"
->
-
-A native timer app, supplemented with a "playlist", i.e. a list of durations. 
-
-</Project>
-
-<Project 
-  title="Zknext" 
-  tags={["nextjs", "react", "kisely", "google cloud run"]} 
-  site="https://next-app-project-kakx2xw7fq-nn.a.run.app/"
-  image={zknext}
-  source="https://github.com/prncss-xyz/zknext"
->
-
-An application to explore a directory of markdown files in an organized way. 
-
-</Project>
-
-<Project
-  title="Flua"
-  tags={["lua", "functional programming"]}
-  site="https://github.com/prncss-xyz/flua"
-  image={flua}
-  source="https://github.com/prncss-xyz/flua"
->
-
-A monadic iterator composition library for Lua.
-
-</Project>
-
-</Section>
-
-<Section name="Talks" variant={2} >
+<TalksSection>
 
 <Project
   title="Functional Optics for State Management and Beyond"
@@ -117,5 +133,5 @@ A talk about a time-tested methodology and its application to state management.
 
 </Project>
 
-</Section>
+</TalksSection>
 </Flex>
