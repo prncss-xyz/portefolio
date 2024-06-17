@@ -35,7 +35,7 @@ export default function RootLayout({
           backgroundPositionY: "top",
         }}
       >
-        <Container px={{ xs: 1, sm: 2, md: 4 }} pt={5} pb={3}>
+        <Container px={{ default: 1, sm: 2, md: 4 }} pt={5} pb={3}>
           <Flex
             direction="y"
             gap={10}

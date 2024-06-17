@@ -16,7 +16,6 @@ const shrink = [0, 1] as const;
 const unconditionalProperties = defineProperties({
   properties: {
     color: colors,
-    backgroundColor: colors,
     borderColor: colors,
     borderWidth: borderWidths,
     minWidth: sizes,
@@ -40,14 +39,16 @@ const unconditionalProperties = defineProperties({
 
 export const responsiveProperties = defineProperties({
   conditions: {
-    xs: {},
+    default: {},
     sm: { "@media": "screen and (min-width: 728px)" },
     md: { "@media": "screen and (min-width: 1024px)" },
     lg: { "@media": "screen and (min-width: 1280px)" },
     xl: { "@media": "screen and (min-width: 1640px)" },
+    hover: { selector: "&:hover" },
   },
-  defaultCondition: "xs",
+  defaultCondition: "default",
   properties: {
+    backgroundColor: colors,
     width: sizes,
     height: sizes,
     paddingTop: space,

@@ -8,6 +8,7 @@ export const itemInner = atoms({
   py: 1,
   fontSize: 2,
   borderRadius: 2,
+  backgroundColor: { hover: "grayA3" },
 });
 
 globalStyle(`${itemInner}:hover`, {
