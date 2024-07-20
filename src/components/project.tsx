@@ -16,6 +16,7 @@ export function Project({
   image,
   source,
   children,
+  featured,
 }: {
   title: string;
   tags: string[];
@@ -23,10 +24,16 @@ export function Project({
   image: string;
   source?: string;
   children: ReactNode;
+  featured?: boolean;
 }) {
   return (
     <ProjectTransition>
-      <Card size={2} width="card" height="card">
+      <Card
+        size={2}
+        width="card"
+        height="card"
+        backgroundColor={featured ? "accent2" : undefined}
+      >
         <Flex direction="y" gap={3} justify="between" height="100%">
           <Flex direction="y" gap={3}>
             <Box fontWeight="bold" color="accent11">

@@ -6,6 +6,6 @@ export default function Page() {
   const router = useRouter();
   useEffect(() => {
     router.replace("/about");
-  }, []);
+  }, [router]);
   return null;
 }
