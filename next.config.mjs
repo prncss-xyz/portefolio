@@ -32,7 +32,6 @@ const nextConfig = {
     // The default value is 0 seconds.
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
-  output: "export",
   basePath,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };

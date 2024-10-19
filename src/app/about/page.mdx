@@ -2,17 +2,18 @@ import { Project } from "@/components/project";
 import { Flex } from "@/components/layout/flex";
 import { RealizationsSection, PackagesSection, ProjectsSection, TalksSection } from "@/components/sections";
 import { MainText } from "@/components/mainText";
-import nt2 from "@/assets/nt2.png";
-import oie from "@/assets/Oie de Cravan.png";
-import oic from "@/assets/OIC.png";
-import timerList from "@/assets/timer-list.png";
-import zknext from "@/assets/zknext.png";
-import flua from "@/assets/flua.png";
-import renote from "@/assets/renote.png";
-import portefolio from "@/assets/portefolio.png";
-import lensTalk from "@/assets/lens-talk.png";
-import zustandOptics from "@/assets/zustand-optics.png"
-import constellar from "@/assets/constellar.png"
+import nt2 from "./nt2.png";
+import oie from "./Oie de Cravan.png";
+import oic from "./OIC.png";
+import timerList from "./timer-list.png";
+import zknext from "./zknext.png";
+import flua from "./flua.png";
+import renote from "./renote.png";
+import portefolio from "./portefolio.png";
+import opticsTalk from "./optics-talk.png";
+import machineTalk from "./machine-talk.png";
+import zustandOptics from "./zustand-optics.png"
+import constellar from "./constellar.png"
 
 <Flex direction="y" gap={10}>
 <MainText>
@@ -47,7 +48,7 @@ As a former mathematician, I am fond of functional programming methodologies and
   image={constellar}
 >
 
- State manipulation primitives as pure functions, with jotai integration.
+ State manipulation primitives as pure functions, with Jotai integration.
 
 </Project>
 
@@ -159,10 +160,21 @@ Like many programmers, I am found of recursion.
   title="Functional Optics for State Management and Beyond"
   tags={["react", "functional programming"]}
   site="https://www.youtube.com/watch?v=GkFKxbMbK6A"
-  image={lensTalk}
+  image={opticsTalk}
 >
 
 A talk about a time-tested methodology and its application to state management.
+
+</Project>
+
+<Project
+  title="Finite State Machines: sometimes a library, always a pattern "
+  tags={["react", "functional programming"]}
+  site="https://www.dev-mtl.ca/talks/state-machines/"
+  image={machineTalk}
+>
+
+A talk about using finite state machines in real life applications with insights from functional programming.
 
 </Project>
 
